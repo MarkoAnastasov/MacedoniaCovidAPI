@@ -11,6 +11,8 @@ namespace MacedoniaCovidAPIV2.Interfaces
 
         List<T> GetAll();
 
+        T GetFirstWhere(Func<T, bool> predicate);
+
         T GetById(int id);
 
         void Update(T entity);

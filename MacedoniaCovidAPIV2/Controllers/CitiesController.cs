@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MacedoniaCovidAPIV2.Models;
 using MacedoniaCovidAPIV2.Interfaces;
-using MacedoniaCovidAPIV2.Errors;
+using MacedoniaCovidAPIV2.Common.Exceptions;
 
 namespace MacedoniaCovidAPIV2.Controllers
 {
@@ -25,113 +25,93 @@ namespace MacedoniaCovidAPIV2.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Cities>> GetAll()
         {
-            var errorMessage = new ValidationError();
-            errorMessage.Value = "";
-            var cities = new List<Cities>();
             try
             {
-                cities = _citiesService.GetAllCities();
+                var cities = _citiesService.GetAllCities();
+
+                return Ok(cities);
+            }
+            catch(FlowException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch(Exception)
             {
-                errorMessage.Value = "Проблем со апликацијата.Пробајте повторно!";
+                return StatusCode(500, "Проблем со апликацијата.Пробајте повторно!");
             }
-
-            if(errorMessage.Value != "")
-            {
-                return NotFound(errorMessage);
-            }
-
-            return Ok(cities);
         }
 
         [HttpGet("{city}")]
         public ActionResult<Cities> GetCityByName(string city)
         {
-            var errorMessage = new ValidationError();
-            errorMessage.Value = "";
-            var getCity = new Cities();
             try
             {
-                getCity = _citiesService.GetCityByName(city,getCity,errorMessage);
+                var getCity = _citiesService.GetCityByName(city);
+
+                return Ok(getCity);
+            }
+            catch (FlowException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch (Exception)
             {
-                errorMessage.Value = "Проблем со апликацијата.Пробајте повторно!";
+                return StatusCode(500, "Проблем со апликацијата.Пробајте повторно!");
             }
-
-            if (errorMessage.Value != "")
-            {
-                return NotFound(errorMessage);
-            }
-
-            return Ok(getCity);
         }
 
         [HttpPost]
         public ActionResult<Cities> AddCity(Cities city)
         {
-            var errorMessage = new ValidationError();
-            errorMessage.Value = "";
-            var createdCity = new Cities();
             try
             {
-                createdCity = _citiesService.AddCity(city,errorMessage);
+                var createdCity = _citiesService.AddCity(city);
+
+                return CreatedAtAction("AddCity", createdCity);
+            }
+            catch (FlowException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception)
             {
-                errorMessage.Value = "Проблем со апликацијата.Пробајте повторно!";
+                return StatusCode(500, "Проблем со апликацијата.Пробајте повторно!");
             }
-
-            if (errorMessage.Value != "")
-            {
-                return BadRequest(errorMessage);
-            }
-
-
-            return CreatedAtAction("AddCity", createdCity);
         }
 
         [HttpPut]
         public ActionResult<Cities> UpdateCity(Cities city)
         {
-            var errorMessage = new ValidationError();
-            errorMessage.Value = "";
-            var updatedCity = new Cities();
             try
             {
-                updatedCity = _citiesService.UpdateCity(city, errorMessage);
+                var updatedCity = _citiesService.UpdateCity(city);
+
+                return Ok(updatedCity);
+            }
+            catch (FlowException ex)
+            {
+                return BadRequest(ex.Message);
             }
             catch (Exception)
             {
-                errorMessage.Value = "Проблем со апликацијата.Пробајте повторно!";
+                return StatusCode(500, "Проблем со апликацијата.Пробајте повторно!");
             }
-
-            if (errorMessage.Value != "")
-            {
-                return BadRequest(errorMessage);
-            }
-
-            return Ok(updatedCity);
         }
 
         [HttpDelete("{city}")]
         public ActionResult DeleteCity(string city)
         {
-            var errorMessage = new ValidationError();
-            errorMessage.Value = "";
             try
             {
-                _citiesService.DeleteCity(city, errorMessage);
+                _citiesService.DeleteCity(city);
+            }
+            catch (FlowException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch (Exception)
             {
-                errorMessage.Value = "Проблем со апликацијата.Пробајте повторно!";
-            }
-
-            if (errorMessage.Value != "")
-            {
-                return BadRequest(errorMessage);
+                return StatusCode(500, "Проблем со апликацијата.Пробајте повторно!");
             }
 
             return Ok();

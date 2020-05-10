@@ -27,6 +27,11 @@ namespace MacedoniaCovidAPIV2.Repositories
             return _context.Set<T>().ToList();
         }
 
+        public T GetFirstWhere(Func<T,bool> predicate)
+        {
+            return _context.Set<T>().FirstOrDefault(predicate);
+        }
+
         public T GetById(int id)
         {
             return _context.Set<T>().Find(id);

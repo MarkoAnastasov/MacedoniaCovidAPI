@@ -1,5 +1,4 @@
-﻿using MacedoniaCovidAPIV2.Errors;
-using MacedoniaCovidAPIV2.Models;
+﻿using MacedoniaCovidAPIV2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +10,12 @@ namespace MacedoniaCovidAPIV2.Interfaces
     {
         List<Cities> GetAllCities();
 
-        Cities GetCityByName(string city, Cities getCity, ValidationError err);
+        Cities GetCityByName(string city);
 
-        Cities AddCity(Cities city, ValidationError err);
+        Cities AddCity(Cities city);
 
-        Cities UpdateCity(Cities city, ValidationError err);
+        Cities UpdateCity(Cities city);
 
-        void DeleteCity(string city, ValidationError err);
+        void DeleteCity(string city);
     }
 }
