@@ -30,17 +30,25 @@ namespace MacedoniaCovidAPIV2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
-            services.AddDbContext<MkdCitiesCovid19Context>(options => options.UseSqlServer("Name=MkdCitiesCovid19"));
+
+            services.AddDbContext<MkdCitiesCovid19Context>(options => options.UseSqlServer(Configuration.GetConnectionString("MkdCitiesCovid19")));
+
             services.AddScoped<ICitiesRepository, CitiesRepository>();
             services.AddScoped<ICitiesService, CitiesService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var configuration = new ConfigurationBuilder()
+                   .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                   .AddJsonFile("appsettings.json")
+                   .Build();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

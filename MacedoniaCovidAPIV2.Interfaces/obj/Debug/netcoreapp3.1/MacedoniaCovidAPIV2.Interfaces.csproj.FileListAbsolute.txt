@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\bin\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.deps.json
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\bin\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.dll
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\bin\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.pdb
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\bin\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Models.dll
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\bin\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Models.pdb
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.AssemblyInfo.cs
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.csproj.CopyComplete
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.dll
+C:\Users\User\Desktop\Marko\Code Academy\backend\MacedoniaCovidAPI\MacedoniaCovidAPIV2.Interfaces\obj\Debug\netcoreapp3.1\MacedoniaCovidAPIV2.Interfaces.pdb

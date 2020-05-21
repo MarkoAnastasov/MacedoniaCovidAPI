@@ -17,5 +17,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MacedoniaCovidAPIV2.Common\MacedoniaCovidAPIV2.Common.csproj" />
+    <ProjectReference Include="..\MacedoniaCovidAPIV2.Services\MacedoniaCovidAPIV2.Services.csproj" />
+  </ItemGroup>
+
 
 </Project>

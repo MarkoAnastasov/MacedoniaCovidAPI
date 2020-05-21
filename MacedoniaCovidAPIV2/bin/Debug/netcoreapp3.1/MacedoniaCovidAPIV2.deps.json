@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v3.1": {
       "MacedoniaCovidAPIV2/1.0.0": {
         "dependencies": {
+          "MacedoniaCovidAPIV2.Common": "1.0.0",
+          "MacedoniaCovidAPIV2.Services": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.1",
@@ -1979,6 +1981,61 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "MacedoniaCovidAPIV2.Common/1.0.0": {
+        "runtime": {
+          "MacedoniaCovidAPIV2.Common.dll": {}
+        },
+        "compile": {
+          "MacedoniaCovidAPIV2.Common.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Interfaces/1.0.0": {
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Models": "1.0.0"
+        },
+        "runtime": {
+          "MacedoniaCovidAPIV2.Interfaces.dll": {}
+        },
+        "compile": {
+          "MacedoniaCovidAPIV2.Interfaces.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
+        },
+        "runtime": {
+          "MacedoniaCovidAPIV2.Models.dll": {}
+        },
+        "compile": {
+          "MacedoniaCovidAPIV2.Models.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Repositories/1.0.0": {
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Interfaces": "1.0.0",
+          "MacedoniaCovidAPIV2.Models": "1.0.0"
+        },
+        "runtime": {
+          "MacedoniaCovidAPIV2.Repositories.dll": {}
+        },
+        "compile": {
+          "MacedoniaCovidAPIV2.Repositories.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Services/1.0.0": {
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Common": "1.0.0",
+          "MacedoniaCovidAPIV2.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "MacedoniaCovidAPIV2.Services.dll": {}
+        },
+        "compile": {
+          "MacedoniaCovidAPIV2.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4552,6 +4609,31 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "MacedoniaCovidAPIV2.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MacedoniaCovidAPIV2.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MacedoniaCovidAPIV2.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MacedoniaCovidAPIV2.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MacedoniaCovidAPIV2.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

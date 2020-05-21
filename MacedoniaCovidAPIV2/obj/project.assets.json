@@ -2231,6 +2231,71 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "MacedoniaCovidAPIV2.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Common.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Interfaces.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3"
+        },
+        "compile": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Models.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Interfaces": "1.0.0",
+          "MacedoniaCovidAPIV2.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Repositories.dll": {}
+        }
+      },
+      "MacedoniaCovidAPIV2.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MacedoniaCovidAPIV2.Common": "1.0.0",
+          "MacedoniaCovidAPIV2.Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MacedoniaCovidAPIV2.Services.dll": {}
+        }
       }
     }
   },
@@ -7561,10 +7626,37 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "MacedoniaCovidAPIV2.Common/1.0.0": {
+      "type": "project",
+      "path": "../MacedoniaCovidAPIV2.Common/MacedoniaCovidAPIV2.Common.csproj",
+      "msbuildProject": "../MacedoniaCovidAPIV2.Common/MacedoniaCovidAPIV2.Common.csproj"
+    },
+    "MacedoniaCovidAPIV2.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../MacedoniaCovidAPIV2.Interfaces/MacedoniaCovidAPIV2.Interfaces.csproj",
+      "msbuildProject": "../MacedoniaCovidAPIV2.Interfaces/MacedoniaCovidAPIV2.Interfaces.csproj"
+    },
+    "MacedoniaCovidAPIV2.Models/1.0.0": {
+      "type": "project",
+      "path": "../MacedoniaCovidAPIV2.Models/MacedoniaCovidAPIV2.Models.csproj",
+      "msbuildProject": "../MacedoniaCovidAPIV2.Models/MacedoniaCovidAPIV2.Models.csproj"
+    },
+    "MacedoniaCovidAPIV2.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../MacedoniaCovidAPIV2.Repositories/MacedoniaCovidAPIV2.Repositories.csproj",
+      "msbuildProject": "../MacedoniaCovidAPIV2.Repositories/MacedoniaCovidAPIV2.Repositories.csproj"
+    },
+    "MacedoniaCovidAPIV2.Services/1.0.0": {
+      "type": "project",
+      "path": "../MacedoniaCovidAPIV2.Services/MacedoniaCovidAPIV2.Services.csproj",
+      "msbuildProject": "../MacedoniaCovidAPIV2.Services/MacedoniaCovidAPIV2.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "MacedoniaCovidAPIV2.Common >= 1.0.0",
+      "MacedoniaCovidAPIV2.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.1",
@@ -7575,17 +7667,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2.csproj",
       "projectName": "MacedoniaCovidAPIV2",
-      "projectPath": "C:\\Users\\User\\source\\repos\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\MacedoniaCovidAPIV2\\MacedoniaCovidAPIV2\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -7599,7 +7695,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2.Common\\MacedoniaCovidAPIV2.Common.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2.Common\\MacedoniaCovidAPIV2.Common.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2.Services\\MacedoniaCovidAPIV2.Services.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Marko\\Code Academy\\backend\\MacedoniaCovidAPI\\MacedoniaCovidAPIV2.Services\\MacedoniaCovidAPIV2.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7660,7 +7763,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
